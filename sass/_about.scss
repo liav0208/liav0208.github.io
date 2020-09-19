@@ -1,0 +1,19 @@
+.theMayor {
+    @extend %box;
+
+
+
+    #mayorAboutImg {
+        float: left;
+        height: 250px;
+        width: 180px;
+        margin: 15px;
+        border: 1px solid #000;
+        border-radius: 5px;
+    }
+}
+
+.tradition,
+.history {
+    @extend %box;
+}

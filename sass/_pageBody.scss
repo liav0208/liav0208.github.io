@@ -1,0 +1,257 @@
+/*page body*/
+
+
+.webPage {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding-bottom: 7em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Henny Penny';
+    font-weight: bold;
+}
+
+
+
+hr {
+    width: 40%;
+    background: linear-gradient(to right, #8cbf3f, #8cbf3f 33%, #9453a6 33%, #9453a6 66%, #f2cc0f 66%, );
+    height: 0.25em;
+    margin: 80px auto;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+%box {
+    width: 50%;
+    margin: 5em auto;
+    text-align: left;
+    padding: 2.2em;
+    line-height: 1.5;
+    font-family: 'Roboto';
+
+    h2 {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+
+    p,
+    a {
+        font-size: 1.3rem;
+    }
+
+}
+
+#mainTitle {
+    font-size: 3.5rem;
+}
+
+
+.paraCon {
+    @extend %box;
+    background-color: #FFFFBF;
+    border: solid 2px #f2cc0f;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 3px #f5d73f,
+        -5px -5px 5px 3px #f5d73f;
+
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        text-align: justify;
+    }
+}
+
+.whenWeStart {
+    @extend %box;
+
+    h2 {
+        text-align: center;
+    }
+
+
+}
+
+
+
+.aboutUs {
+    @extend %box;
+
+    h2 {
+        text-align: center;
+    }
+
+}
+
+.mayorSay {
+
+    @extend %box;
+    background-color: #FFFFBF;
+    border: solid 2px #f2cc0f;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px 3px #f5d73f,
+        -5px -5px 5px 3px #f5d73f;
+    width: 32%;
+    height: 18em;
+
+
+    img {
+        width: 8em;
+        height: 11em;
+        float: left;
+        margin-right: 2em;
+        border-radius: 5%;
+        border: 1px solid #000;
+    }
+
+
+
+}
+
+
+//media query
+
+//mobile
+@media(max-width:599px) {
+    .webPage {
+        #mainTitle {
+            font-size: 1.8em;
+        }
+
+        h3 {
+            font-size: 1.4em;
+        }
+
+        hr {
+            width: 90%;
+        }
+
+        %box {
+            width: 90%;
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            p,
+            a {
+                font-size: 1.1rem;
+            }
+        }
+
+        .mayorSay {
+            height: 23rem;
+
+            img {
+                height: 9rem;
+            }
+        }
+    }
+}
+
+//tablet
+@media(max-width:900px) {
+    %box {
+        width: 80%;
+
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+        }
+    }
+
+    hr {
+        width: 90%;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    #mainTitle {
+        font-size: 3em;
+    }
+}
+
+//tablet landscape
+@media(min-width:901px) and (max-width:1199px) {
+    %box {
+        width: 50%;
+
+        h2 {
+            font-size: 1.7rem;
+        }
+
+        p,
+        a {
+            font-size: 1.1rem;
+        }
+    }
+
+    hr {
+        width: 50%;
+    }
+
+    h3 {
+        font-size: 2em;
+    }
+
+    #mainTitle {
+        font-size: 2.8rem;
+    }
+
+
+
+
+}
+
+//leptop
+@media(min-width:1200px) and (max-width:1799px) {
+    hr {
+        width: 50%;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    #mainTitle {
+        font-size: 2.8rem;
+    }
+
+    %box {
+
+        p,
+        a {
+            font-size: 1rem;
+        }
+    }
+
+    .mayorSay {
+
+        img {
+            width: 6rem;
+            height: 8rem;
+        }
+    }
+}

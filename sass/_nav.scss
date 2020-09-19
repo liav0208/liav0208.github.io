@@ -1,0 +1,203 @@
+/* Nav*/
+
+nav {
+    width: 100%;
+    background-color: #8cbf3f;
+    padding: 0;
+    height: 3.5em;
+
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        list-style-type: none;
+        position: relative;
+    }
+
+    #hamburger {
+        cursor: pointer;
+        width: 2.5rem;
+        display: none;
+        font-size: 2em;
+        font-weight: bold;
+        padding: 0.2em 0 0.075em;
+
+        span {
+            width: 2.5rem;
+            border-radius: 7px;
+            height: 0.4rem;
+            display: block;
+            background-color: #000;
+            margin: 0 0 4.5px;
+            transition: 0.4s;
+        }
+
+        .bar1 {
+            background-color: #8cbf3f;
+
+        }
+
+        .bar2 {
+            background-color: #f2cc0f;
+        }
+
+        .bar3 {
+            background-color: #9453a6;
+
+        }
+
+
+        .bar1X {
+            transform: rotate(-45deg) translate(-9px, 6px);
+
+        }
+
+        .bar2X {
+            opacity: 0;
+        }
+
+        .bar3X {
+            transform: rotate(45deg) translate(-8px, -8px);
+        }
+    }
+
+
+    ul li a {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        width: 6.2em;
+        color: #000;
+        text-align: center;
+        font-size: 1.6em;
+        transition: background-color 0.4s ease-in-out, clip-path 0.2s ease-in-out;
+        font-family: 'Roboto';
+        clip-path: polygon(100% 0, 100% 40%, 50% 90%, 0 40%, 0 0);
+        height: 5.4em;
+
+
+        &:hover {
+            clip-path: polygon(100% 0, 100% 50%, 50% 100%, 0 50%, 0 0);
+
+        }
+    }
+
+    li:nth-child(odd) a {
+        background-color: #9453a6;
+    }
+
+    li:nth-child(odd) a:hover {
+        background-color: #6f2f81;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    li:nth-child(even) a {
+        background-color: #f2cc0f;
+    }
+
+    li:nth-child(even) a:hover {
+        background-color: #c7ad2d;
+        color: #000000;
+        text-decoration: none;
+    }
+
+    // media queries 
+    //mobile
+    @media(max-width:599px) {
+
+        text-align: left;
+        font-size: 0.8em;
+        background: linear-gradient(to right, #8cbf3f, #9453a6, #f2cc0f, #9453a6,
+                #8cbf3f);
+        height: auto;
+
+        #hamburger {
+            display: block;
+            margin-left: 0.8em;
+
+            span {
+                width: 2rem;
+                height: 0.2rem;
+                margin: 0 0 8px;
+            }
+        }
+
+        ul {
+            display: none;
+            z-index: 5;
+            padding: 0;
+            position: relative;
+
+        }
+
+        ul li a {
+            width: 100%;
+            background-color: none;
+            background: linear-gradient(to right, #8cbf3f, #9453a6, #f2cc0f, #9453a6,
+                    #8cbf3f);
+            clip-path: none !important;
+            height: 3em;
+            font-size: 1em;
+        }
+    }
+
+    //tablet
+    @media(min-width: 600px) and (max-width: 900px) {
+        text-align: left;
+        background: linear-gradient(to right, #8cbf3f, #9453a6, #f2cc0f, #9453a6,
+                #8cbf3f);
+        height: auto;
+
+        #hamburger {
+            display: block;
+            margin-left: 1em;
+
+
+        }
+
+        ul {
+            display: none;
+            z-index: 5;
+            padding: 0;
+            position: relative;
+        }
+
+        ul li a {
+            width: 100%;
+            background: linear-gradient(to right, #8cbf3f, #9453a6, #f2cc0f, #9453a6,
+                    #8cbf3f);
+            clip-path: none !important;
+            height: 3em;
+            font-size: 1.4em;
+
+
+        }
+    }
+
+    //tablet landscape
+
+    @media (min-width:901px) and (max-width:1199px) {
+        height: 2.2em;
+
+        ul {
+            li a {
+                width: 7em;
+                font-size: 1em;
+            }
+        }
+    }
+
+    //leptop
+    @media(min-width:1200px) and (max-width:1799px) {
+        height: 3em;
+
+        ul {
+            li a {
+                width: 7em;
+                font-size: 1.5em;
+                height: 5em;
+            }
+        }
+    }
+}

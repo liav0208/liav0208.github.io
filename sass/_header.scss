@@ -1,0 +1,76 @@
+/* header*/
+
+header {
+
+    background: radial-gradient(#F1ECDA, #FDF8E5, #F1ECDA, #FDF8E5, #F1ECDA, #FDF8E5);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5em;
+
+
+
+    #logo {
+        width: 11em;
+        height: 11em;
+    }
+
+
+    #mainHeaderLine {
+        width: 19em;
+
+    }
+
+    //mobile
+    @media(max-width:599px) {
+
+        #logo {
+            width: 4.5em;
+            height: 4.5em;
+        }
+
+        #mainHeaderLine {
+            width: 9em;
+        }
+
+    }
+
+    //tablet
+    @media(min-width: 600px) and (max-width:900px) {
+
+        #logo {
+            width: 7em;
+            height: 7em;
+        }
+
+        #mainHeaderLine {
+            width: 12em;
+        }
+    }
+
+    //tablet landscpae
+    @media (min-width:901px) and (max-width:1199px) {
+        #logo {
+            width: 8em;
+            height: 8em;
+        }
+
+        #mainHeaderLine {
+            width: 14em;
+        }
+    }
+
+    //leptop
+    @media(min-width:1200px) and (max-width:1799px) {
+        #logo {
+            width: 9em;
+            height: 9em;
+        }
+
+        #mainHeaderLine {
+            width: 16em;
+        }
+
+    }
+}

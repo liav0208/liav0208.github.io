@@ -1,0 +1,217 @@
+/*footer*/
+footer {
+    height: 26rem;
+    width: 100%;
+    background-image: url("../images/footerImage1.png");
+    text-align: center;
+    padding-bottom: 1rem;
+
+    p {
+        color: #fff;
+        font-size: 1.3em;
+        font-weight: bold;
+        text-shadow: 1px 1px #000,
+            -1px -1px #000,
+            -1px 1px #000,
+            1px -1px #000;
+    }
+
+    p+a {
+        display: block;
+        width: 3.1rem;
+        height: 3.1rem;
+        border: 3px solid #000;
+        border-radius: 50%;
+        color: #000;
+    }
+
+
+}
+
+.mobileFooterAds {
+    display: none;
+    text-decoration: none;
+    width: 80%;
+    padding: 4px;
+    background-color: rgba(242, 242, 242, .4);
+    font-size: 1.5em;
+    margin: 0 auto;
+
+
+    a {
+        color: #000;
+    }
+
+}
+
+#footerAds {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2.5rem;
+}
+
+
+
+%fooAd {
+    width: 20%;
+    height: 7.2rem;
+    background-color: #fff;
+
+
+
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+#footerAd1,
+#footerAd2,
+#footerAd3,
+#footerAd4 {
+    @extend %fooAd;
+}
+
+
+.webLogo {
+    width: 30rem;
+    margin: 0 auto 6em;
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    top: -30px;
+
+
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #fff;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        transition: background-color 0.5s ease-in-out;
+        font-size: 1.7em;
+        color: #fff;
+    }
+
+
+    .fa-facebook-f {
+        background-color: #3F69D8;
+    }
+
+    .fa-twitter {
+        background-color: #2CBEE3;
+    }
+
+    .fa-instagram {
+        background-color: #BE209B;
+    }
+
+    .fa-youtube {
+        background-color: #CD201F;
+    }
+
+    .fa-tripadvisor {
+        background-color: #598F34;
+
+    }
+
+    .fa-chevron-up {
+        background-color: #c7c701;
+        color: #000;
+    }
+
+    a:hover {
+        background-color: #3E3D3D;
+        text-decoration: none;
+    }
+
+
+}
+
+//media query
+
+//mobile
+@media(max-width:599px) {
+    .webLogo {
+        width: 80%;
+
+        a {
+            width: 1.8em;
+            height: 1.8em;
+        }
+    }
+
+    #footerAds {
+        display: none;
+    }
+
+    .mobileFooterAds {
+        display: block;
+        text-decoration: none;
+        width: 80%;
+        padding: 4px;
+        background-color: rgba(242, 242, 242, .4);
+        font-size: 1em;
+        margin: 0 auto;
+
+        a {
+            color: #000;
+        }
+
+    }
+}
+
+//tablet
+@media(min-width:600px) and (max-width:900px) {
+    #footerAds {
+        display: none;
+    }
+
+    .mobileFooterAds {
+        display: block;
+        text-decoration: none;
+        width: 80%;
+        padding: 4px;
+        background-color: rgba(242, 242, 242, .4);
+        font-size: 1.5em;
+        margin: 0 auto;
+
+
+        a {
+            color: #000;
+        }
+
+    }
+
+}
+
+//tablet landscape
+@media(min-width:901px) and (max-width:1199px) {
+    .webLogo {
+        width: 25em;
+        margin: 0 auto 6em;
+
+        a {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+}
+
+//leptop
+@media(min-width:1200px) and (max-width:1799px) {
+    .webLogo {
+        width: 25rem;
+        margin: 0 auto 6em;
+
+        a {
+            width: 3.5rem;
+            height: 3.5rem;
+        }
+    }
+}

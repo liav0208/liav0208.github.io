@@ -1,0 +1,107 @@
+#accordion {
+    @extend %box;
+
+    h2 {
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    hr {
+        width: 50%;
+        margin: 0 auto 100px;
+    }
+
+    h5 {
+        font-family: 'Roboto';
+    }
+
+    button {
+        color: #000;
+
+    }
+
+    div.card-header {
+        background-color: #9453a6;
+
+        h5 button {
+            font-size: 1.6rem;
+        }
+
+    }
+
+
+    .green {
+        background-color: #8cbf3f !important;
+    }
+
+    .yellow {
+        background-color: #f2cc0f !important;
+    }
+}
+
+//media Query
+//mobile
+@media(max-width:599px) {
+    #accordion {
+        .card-header h5 button {
+            font-size: 1rem !important;
+        }
+
+        .card-body p {
+            font-size: 1rem;
+            font-family: 'Roboto';
+        }
+
+        h2 {
+            font-size: 2rem !important;
+        }
+    }
+}
+
+//tablet
+
+@media(min-width: 600px) and (max-width: 900px) {
+    #accordion {
+
+        .card-header h5 button {
+            font-size: 1.2rem !important;
+        }
+
+        .card-body p {
+            font-family: 'Roboto';
+            font-size: 0.8rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}
+
+//tablet landscape
+
+@media (min-width:901px) and (max-width:1199px) {
+    #accordion {
+        .card-header h5 button {
+            font-size: 1.3rem !important;
+        }
+
+        .card-body p {
+            font-family: 'Roboto';
+            font-size: 0.8rem;
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+    }
+}
+
+//leptop
+@media(min-width:1200px) and (max-width:1799px) {
+    #accordion {
+        .card-header h5 button {
+            font-size: 1.5rem !important;
+        }
+    }
+}

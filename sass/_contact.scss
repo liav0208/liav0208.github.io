@@ -1,0 +1,180 @@
+.contact {
+    @extend %box;
+    width: 60%;
+    color: #555;
+
+    a {
+        color: #000;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 4rem;
+        margin-bottom: 50px;
+    }
+
+    #mobileForm {
+        display: none;
+    }
+
+    input {
+        width: 14rem;
+        border: 0;
+        border-radius: 5px;
+        padding: 0.2rem;
+        box-shadow: 0 3px 8px #000;
+        outline: 0;
+        margin: 0 10px 0 5px;
+
+    }
+
+    label {
+        font-size: 1.6rem;
+    }
+
+    #userName {
+        border-bottom: 0.4rem solid #9453a6;
+    }
+
+    #userEmail {
+        border-bottom: 0.4rem solid #f2cc0f;
+    }
+
+    #userPhone {
+        border-bottom: 0.4rem solid #8cbf3f;
+    }
+
+    #content {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px #000;
+    }
+
+    input[type="submit"] {
+        display: block;
+        margin: 30px auto;
+        font-size: 1.3rem;
+        background-color: #B20000;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        border: 0;
+        width: 17rem;
+
+        &:hover {
+            background-color: #b24444;
+        }
+
+    }
+
+}
+
+#contactHr {
+    margin-bottom: 350px;
+}
+
+
+
+//media Query
+//Mobile
+@media(max-width:599px) {
+    #contactForm {
+        display: none;
+    }
+
+    #mobileForm {
+        display: block !important;
+
+        input {
+            margin-bottom: 8px;
+            width: 250px;
+        }
+    }
+
+    #contactHr {
+        margin-bottom: 200px;
+    }
+}
+
+//tablet
+@media(min-width: 600px) and (max-width: 900px) {
+    .contact {
+        #contactForm {
+            display: none;
+        }
+
+        #mobileForm {
+            display: block !important;
+
+            input {
+                margin-bottom: 8px;
+                width: 300px;
+
+            }
+
+            imput[type="submit"] {
+                padding: 0 50px;
+            }
+        }
+    }
+
+    #contactHr {
+        margin-bottom: 200px;
+    }
+}
+
+//tablet landscape
+
+@media (min-width:901px) and (max-width:1199px) {
+    .contact {
+        #contactForm {
+            input {
+                width: 330px;
+                margin: 0 150px 10px 0;
+                display: block;
+            }
+
+            label {
+                display: block;
+            }
+
+            input[type="submit"] {
+                margin: 5rem auto;
+            }
+
+            label {
+                font-size: 1.1rem;
+            }
+        }
+    }
+}
+
+//leptop
+@media(min-width:1200px) and (max-width:1799px) {
+    .contact {
+        #contactForm {
+            input {
+                width: 15rem;
+                margin: 0 150px 10px 0;
+                display: block;
+            }
+
+
+
+            input[type="submit"] {
+                margin: 5rem auto;
+            }
+
+            label {
+                font-size: 1.3rem;
+            }
+        }
+    }
+}

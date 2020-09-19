@@ -1,0 +1,126 @@
+/* side ad*/
+
+// %sideAd 
+@mixin sideAd($top, $left, $right) {
+    width: 15%;
+    position: absolute;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid #333;
+    background-color: #d1cece;
+    font-size: 1em;
+    top: $top;
+    left: $left;
+    right: $right;
+    border-radius: 7px;
+
+    img {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        top: -50px;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid #333;
+
+
+    }
+
+    h4 {
+        font-family: 'Roboto';
+
+    }
+
+    p {
+        font-family: 'Roboto';
+        font-size: 1rem;
+    }
+
+    a {
+        display: block;
+        background-color: #276DB8;
+        color: #fff;
+        border-radius: 5px;
+        width: 10rem;
+        margin: 0 auto;
+        font-size: 1rem;
+
+        &:hover {
+            text-decoration: none;
+            background-color: #4381c4;
+        }
+    }
+
+}
+
+.contactAd1 {
+    top: 400px !important;
+}
+
+.contactAd2 {
+    top: 1000px !important;
+}
+
+.contactAd3 {
+    top: 400px !important;
+}
+
+.contactAd4 {
+    top: 1000px !important;
+}
+
+#sideAd1 {
+    @include sideAd(1100px, 10px, auto)
+}
+
+#sideAd2 {
+    @include sideAd(1650px, 10px, auto)
+}
+
+#sideAd3 {
+    @include sideAd(1100px, auto, 10px)
+}
+
+#sideAd4 {
+    @include sideAd(1650px, auto, 10px)
+}
+
+.contentWrapper {
+    position: relative;
+    top: -45px;
+}
+
+//media query
+
+//mobile
+@media(max-width:599px) {
+
+    #sideAd1,
+    #sideAd3,
+    #sideAd4,
+    #sideAd2 {
+        display: none;
+    }
+}
+
+//tablet
+@media(min-width:600px) and (max-width:900px) {
+
+    #sideAd1,
+    #sideAd3,
+    #sideAd4,
+    #sideAd2 {
+        display: none;
+    }
+}
+
+//tablet landscape
+@media(min-width:901px) and (max-width:1199px) {
+
+    #sideAd1,
+    #sideAd3,
+    #sideAd4,
+    #sideAd2 {
+        width: 20%;
+    }
+}
